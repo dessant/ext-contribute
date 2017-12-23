@@ -1,4 +1,4 @@
-import Button from './Contribute';
+import Contribute from './Contribute';
 
 module.exports = {
   Contribute
