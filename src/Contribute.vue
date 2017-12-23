@@ -82,6 +82,8 @@ import browser from 'webextension-polyfill';
 import {Button, LinearProgress} from 'ext-components';
 
 export default {
+  name: 'v-contribute',
+
   components: {
     [Button.name]: Button,
     [LinearProgress.name]: LinearProgress
