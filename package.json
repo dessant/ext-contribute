@@ -11,16 +11,16 @@
     "release": "standard-version && yarn run push"
   },
   "dependencies": {
-    "@material/theme": "^0.25.0",
+    "@material/theme": "^0.27.0",
     "@material/typography": "^0.3.0",
-    "ext-components": "dessant/ext-components#^0.1.1",
+    "ext-components": "dessant/ext-components#^0.1.2",
     "typeface-roboto": "^0.0.45",
-    "vue": "^2.5.9",
+    "vue": "^2.5.13",
     "webextension-polyfill": "^0.2.1"
   },
   "devDependencies": {
-    "npm-check-updates": "^2.13.0",
-    "standard-version": "^4.2.0"
+    "npm-check-updates": "^2.14.0",
+    "standard-version": "^4.3.0"
   },
   "private": true
 }
