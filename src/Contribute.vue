@@ -72,7 +72,7 @@
 
   <div class="cta-coin" @click="contribute('bitcoin')">
     <img src="./assets/bitcoin.svg">
-    <div>1CtN7pqNAtccD6GsV2nducepRQTFub5G8J</div>
+    <div>BITCOIN</div>
   </div>
 </div>
 </template>
@@ -242,15 +242,15 @@ $mdc-theme-primary: #1abc9c;
   opacity: 0.7;
 }
 
-.goals-enter-active, .goals-leave-active {
+.goals-enter-active,
+.goals-leave-active {
   max-height: 300px;
   margin-top: 24px;
-  transition: max-height .4s ease,
-              margin-top .4s ease,
-              opacity .3s ease;
+  transition: max-height 0.4s ease, margin-top 0.4s ease, opacity 0.3s ease;
 }
 
-.goals-enter, .goals-leave-to {
+.goals-enter,
+.goals-leave-to {
   max-height: 0;
   margin-top: 0;
   opacity: 0;
@@ -268,9 +268,9 @@ $mdc-theme-primary: #1abc9c;
   justify-items: center;
   grid-template-columns: repeat(2, auto);
   grid-column-gap: 8px;
-  margin-top: 24px;
+  margin-top: 32px;
   margin-bottom: 24px;
-  @include mdc-typography(caption);
+  @include mdc-typography(subheading2);
   font-weight: 700;
   color: #3498db;
   cursor: pointer;
@@ -295,11 +295,9 @@ $mdc-theme-primary: #1abc9c;
   height: 20px;
 }
 
-@media (min-width: 360px) {
-  .cta-coin {
-    @include mdc-typography(body1);
-    font-weight: 700;
-  }
+.cta-coin img {
+  width: 20px;
+  height: 20px;
 }
 
 @media (min-width: 480px) {
@@ -307,12 +305,6 @@ $mdc-theme-primary: #1abc9c;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 56px;
     margin-top: 56px;
-  }
-
-  .cta-coin {
-    @include mdc-typography(subheading2);
-    font-weight: 700;
-    margin-top: 36px;
   }
 
   .desc-image {
@@ -385,7 +377,8 @@ $mdc-theme-primary: #1abc9c;
     height: 16px;
   }
 
-  .goals-enter-active, .goals-leave-active {
+  .goals-enter-active,
+  .goals-leave-active {
     margin-top: 48px;
   }
 }
