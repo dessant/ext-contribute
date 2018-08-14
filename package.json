@@ -13,7 +13,7 @@
   "dependencies": {
     "@material/theme": "^0.30.0",
     "@material/typography": "^0.28.0",
-    "ext-components": "dessant/ext-components#^0.1.4",
+    "ext-components": "dessant/ext-components#^0.1.5",
     "typeface-roboto": "^0.0.54",
     "vue": "^2.5.17",
     "webextension-polyfill": "^0.3.0"
