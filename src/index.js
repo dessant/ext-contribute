@@ -1,5 +1,3 @@
 import Contribute from './Contribute';
 
-module.exports = {
-  Contribute
-};
+export {Contribute};
