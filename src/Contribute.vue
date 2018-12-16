@@ -1,3 +1,4 @@
+<!-- prettier-ignore -->
 <template>
 <div id="contribute">
   <div class="notice" v-if="notice">
@@ -285,7 +286,7 @@ $mdc-theme-primary: #1abc9c;
   display: flex;
   align-items: center;
   justify-content: center;
-  @include mdc-button-container-fill-color(#FFAD01);
+  @include mdc-button-container-fill-color(#ffad01);
   width: 192px !important;
   height: 48px !important;
 }
