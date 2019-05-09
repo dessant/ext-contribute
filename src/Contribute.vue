@@ -153,7 +153,7 @@ $mdc-theme-primary: #1abc9c;
 }
 
 .notice {
-  @include mdc-typography(body1);
+  @include mdc-typography(body2);
   @include mdc-theme-prop(color, text-primary-on-light);
   margin-top: 12px;
   max-width: 90vw;
@@ -163,7 +163,7 @@ $mdc-theme-primary: #1abc9c;
 }
 
 .title {
-  @include mdc-typography(title);
+  @include mdc-typography(headline6);
   @include mdc-theme-prop(color, text-primary-on-light);
   margin-top: 24px;
   max-width: 90vw;
@@ -178,8 +178,9 @@ $mdc-theme-primary: #1abc9c;
 }
 
 .desc-text {
-  @include mdc-typography(subheading1);
+  @include mdc-typography(body1);
   @include mdc-theme-prop(color, text-primary-on-light);
+  font-size: .938rem;
   max-width: 90vw;
 }
 
@@ -197,14 +198,15 @@ $mdc-theme-primary: #1abc9c;
 }
 
 .cta {
-  @include mdc-typography(title);
+  @include mdc-typography(headline6);
   @include mdc-theme-prop(color, text-primary-on-light);
   text-align: center;
 }
 
 .goals {
-  @include mdc-typography(subheading1);
+  @include mdc-typography(body1);
   @include mdc-theme-prop(color, text-primary-on-light);
+  font-size: .938rem;
 }
 
 .goals {
@@ -271,7 +273,7 @@ $mdc-theme-primary: #1abc9c;
   grid-column-gap: 8px;
   margin-top: 32px;
   margin-bottom: 24px;
-  @include mdc-typography(subheading2);
+  @include mdc-typography(subtitle1);
   font-weight: 700;
   color: #3498db;
   cursor: pointer;
@@ -315,7 +317,7 @@ $mdc-theme-primary: #1abc9c;
 
 @media (min-width: 576px) {
   .title {
-    @include mdc-typography(headline);
+    @include mdc-typography(headline5);
   }
 
   .desc-text {
@@ -329,7 +331,7 @@ $mdc-theme-primary: #1abc9c;
 
 @media (min-width: 768px) {
   .title {
-    @include mdc-typography(display1);
+    @include mdc-typography(headline4);
     @include mdc-theme-prop(color, text-primary-on-light);
     margin-top: 48px;
   }
@@ -341,7 +343,7 @@ $mdc-theme-primary: #1abc9c;
   }
 
   .desc-text {
-    @include mdc-typography(subheading2);
+    @include mdc-typography(subtitle1);
     max-width: 400px;
   }
 
@@ -355,11 +357,11 @@ $mdc-theme-primary: #1abc9c;
   }
 
   .cta {
-    @include mdc-typography(headline);
+    @include mdc-typography(headline5);
   }
 
   .goals {
-    @include mdc-typography(subheading2);
+    @include mdc-typography(subtitle1);
   }
 
   .goals {
@@ -371,7 +373,7 @@ $mdc-theme-primary: #1abc9c;
   }
 
   .progress-details {
-    @include mdc-typography(body1);
+    @include mdc-typography(body2);
   }
 
   .progress-token {

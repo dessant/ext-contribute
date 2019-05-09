@@ -6,22 +6,23 @@
   "license": "MIT",
   "main": "src/index.js",
   "scripts": {
-    "update": "ncu --upgrade --upgradeAll && yarn",
+    "update": "ncu --upgrade && yarn",
     "push": "git push --follow-tags origin master",
-    "release": "standard-version && yarn run push"
+    "release": "standard-version"
   },
   "dependencies": {
-    "@material/theme": "^0.30.0",
-    "@material/typography": "^0.28.0",
-    "ext-components": "dessant/ext-components#^0.1.6",
+    "ext-components": "dessant/ext-components#^0.2.0",
+    "@material/theme": "^1.1.0",
+    "@material/typography": "^1.0.0",
+
     "typeface-roboto": "^0.0.54",
-    "vue": "^2.5.17",
-    "webextension-polyfill": "^0.3.1"
+    "vue": "^2.6.10",
+    "webextension-polyfill": "^0.4.0"
   },
   "devDependencies": {
-    "npm-check-updates": "^2.15.0",
-    "prettier": "^1.15.3",
-    "standard-version": "^4.4.0"
+    "npm-check-updates": "^3.1.9",
+    "prettier": "^1.17.0",
+    "standard-version": "^6.0.1"
   },
   "private": true
 }
