@@ -1,6 +1,15 @@
-# Change Log
+# Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [0.2.0](https://github.com/dessant/ext-contribute/compare/v0.1.6...v0.2.0) (2019-05-09)
+
+
+### Features
+
+* update dependencies and components ([07d830f](https://github.com/dessant/ext-contribute/commit/07d830f))
+
+
 
 <a name="0.1.6"></a>
 ## [0.1.6](https://github.com/dessant/ext-contribute/compare/v0.1.5...v0.1.6) (2018-12-16)

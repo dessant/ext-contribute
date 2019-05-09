@@ -1,6 +1,6 @@
 {
   "name": "ext-contribute",
-  "version": "0.1.6",
+  "version": "0.2.0",
   "author": "Armin Sebastian",
   "repository": "https://github.com/dessant/ext-contribute",
   "license": "MIT",
@@ -14,7 +14,6 @@
     "ext-components": "dessant/ext-components#^0.2.0",
     "@material/theme": "^1.1.0",
     "@material/typography": "^1.0.0",
-
     "typeface-roboto": "^0.0.54",
     "vue": "^2.6.10",
     "webextension-polyfill": "^0.4.0"
