@@ -107,26 +107,27 @@ export default {
 
   data: function() {
     return {
-      goals: null,
-      apiUrl: 'https://extensions.rmn.space/api/v1'
+      goals: null
     };
   },
 
   methods: {
-    contribute: async function(method) {
+    contribute: async function(service) {
       const [activeTab] = await browser.tabs.query({
         lastFocusedWindow: true,
         active: true
       });
       await browser.tabs.create({
-        url: `${this.apiUrl}/contribute/${this.extSlug}/${method}`,
+        url: `https://armin.dev/go/${service}?pr=${this.extSlug}&src=app`,
         index: activeTab.index + 1
       });
     }
   },
 
   mounted: async function() {
-    const rsp = await fetch(`${this.apiUrl}/goals/${this.extSlug}`);
+    const rsp = await fetch(
+      `https://api.armin.dev/v1/contribute/goals/${this.extSlug}`
+    );
     const goals = await rsp.json();
 
     const exchangeRate = goals.progress.currency.exchangeRate;
@@ -180,7 +181,7 @@ $mdc-theme-primary: #1abc9c;
 .desc-text {
   @include mdc-typography(body1);
   @include mdc-theme-prop(color, text-primary-on-light);
-  font-size: .938rem;
+  font-size: 0.938rem;
   max-width: 90vw;
 }
 
@@ -206,7 +207,7 @@ $mdc-theme-primary: #1abc9c;
 .goals {
   @include mdc-typography(body1);
   @include mdc-theme-prop(color, text-primary-on-light);
-  font-size: .938rem;
+  font-size: 0.938rem;
 }
 
 .goals {
