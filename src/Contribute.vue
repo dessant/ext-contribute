@@ -1,81 +1,81 @@
-<!-- prettier-ignore -->
 <template>
-<div id="contribute">
-  <div class="notice" v-if="notice">
-    {{ notice }}
-  </div>
-
-  <div class="title">
-    Help us make some avocado toast!
-  </div>
-
-  <div class="desc">
-    <div class="desc-text">
-      <p>
-        <span class="ext-name">{{ extName }}</span> is a project fueled by
-        love and crunchy toast, created for everyone to freely use and improve.
-      </p>
-      <p>
-        You can support our goals and make a difference by sharing some avocados
-        with us! Every ounce will help add new features and keep things afloat.
-      </p>
+  <div id="contribute">
+    <div class="notice" v-if="notice">
+      {{ notice }}
     </div>
-    <img class="desc-image" src="./assets/avocado-toast.jpg">
-  </div>
 
-  <transition name="goals">
-    <div class="goals-wrap" v-if="goals">
-      <div class="cta">
-        Support our current goals
-      </div>
-      <div class="goals">
-        <div class="goal" v-for="goal in goals.items" :key="goal.id">
-          <div class="goal-bullet">•</div>
-          {{ goal }}
-        </div>
-      </div>
-      <v-linear-progress :progress="goals.progress.value / goals.progress.goal">
-      </v-linear-progress>
-      <div class="progress-details">
-        <div>
-          Raised
-          <span class="progress-value">{{ goals.progress.value }}</span>
-          <img class="progress-token" src="./assets/avocado.svg">
-          of
-          <span class="progress-value">{{ goals.progress.goal }}</span>
-          <img class="progress-token" src="./assets/avocado.svg">
-          goal
-        </div>
-        <div>
-          <span class="progress-value">1</span>
-          <img class="progress-token" src="./assets/avocado.svg">
-          =
-          {{ goals.progress.currency.symbol }}<span
-              class="progress-value">{{ goals.progress.currency.exchangeRate }}
-          </span>
-        </div>
-      </div>
+    <div class="title">
+      Help us make some avocado toast!
     </div>
-  </transition>
 
-  <div class="cta-buttons">
-    <v-button class="contribute-button"
-        :raised="true"
-        @click="contribute('patreon')">
-      <img class="patreon-image" src="./assets/patreon.png">
-    </v-button>
-    <v-button class="contribute-button"
-        :raised="true"
-        @click="contribute('paypal')">
-      <img class="paypal-image" src="./assets/paypal.png">
-    </v-button>
-  </div>
+    <div class="desc">
+      <div class="desc-text">
+        <p>
+          <span class="ext-name">{{ extName }}</span> is a project fueled by
+          love and crunchy toast, created for everyone to freely use and
+          improve.
+        </p>
+        <p>
+          You can support our goals and make a difference by sharing some
+          avocados with us! Every ounce will help add new features and keep
+          things afloat.
+        </p>
+      </div>
+      <img class="desc-image" src="./assets/avocado-toast.jpg" />
+    </div>
 
-  <div class="cta-coin" @click="contribute('bitcoin')">
-    <img src="./assets/bitcoin.svg">
-    <div>BITCOIN</div>
+    <transition name="goals">
+      <div class="goals-wrap" v-if="goals">
+        <div class="cta">
+          Support our current goals
+        </div>
+        <div class="goals">
+          <div class="goal" v-for="goal in goals.items" :key="goal.id">
+            <div class="goal-bullet">•</div>
+            {{ goal }}
+          </div>
+        </div>
+        <v-linear-progress
+          :progress="goals.progress.value / goals.progress.goal"
+        >
+        </v-linear-progress>
+        <div class="progress-details">
+          <div>
+            Raised
+            <span class="progress-value">{{ goals.progress.value }}</span>
+            <img class="progress-token" src="./assets/avocado.svg" />
+            of
+            <span class="progress-value">{{ goals.progress.goal }}</span>
+            <img class="progress-token" src="./assets/avocado.svg" />
+            goal
+          </div>
+          <div>
+            <span class="progress-value">1</span>
+            <img class="progress-token" src="./assets/avocado.svg" />
+            =
+            {{ goals.progress.currency.symbol
+            }}<span class="progress-value"
+              >{{ goals.progress.currency.exchangeRate }}
+            </span>
+          </div>
+        </div>
+      </div>
+    </transition>
+
+    <div class="cta-buttons">
+      <v-button class="contribute-button" @click="contribute('patreon')" raised>
+        <img class="patreon-image" src="./assets/patreon.png" />
+      </v-button>
+      <v-button class="contribute-button" @click="contribute('paypal')" raised>
+        <img class="paypal-image" src="./assets/paypal.png" />
+      </v-button>
+    </div>
+
+    <div class="cta-coin" @click="contribute('bitcoin')">
+      <img src="./assets/bitcoin.svg" />
+      <div>BITCOIN</div>
+    </div>
   </div>
-</div>
 </template>
 
 <script>

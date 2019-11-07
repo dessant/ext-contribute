@@ -11,15 +11,17 @@
     "release": "standard-version"
   },
   "dependencies": {
-    "ext-components": "dessant/ext-components#^0.2.2",
-    "@material/theme": "^3.1.0",
-    "@material/typography": "^3.1.0",
+    "ext-components": "dessant/ext-components#^0.3.0",
+    "@material/theme": "^4.0.0",
+    "@material/typography": "^4.0.0",
+    "webextension-polyfill": "^0.5.0"
+  },
+  "peerDependencies": {
     "typeface-roboto": "^0.0.75",
-    "vue": "^2.6.10",
-    "webextension-polyfill": "^0.4.0"
+    "vue": "^2.6.10"
   },
   "devDependencies": {
-    "npm-check-updates": "^3.1.21",
+    "npm-check-updates": "^3.2.0",
     "prettier": "^1.18.2",
     "standard-version": "^7.0.0"
   },
