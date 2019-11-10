@@ -37,6 +37,7 @@
         </div>
         <v-linear-progress
           :progress="goals.progress.value / goals.progress.goal"
+          open
         >
         </v-linear-progress>
         <div class="progress-details">
