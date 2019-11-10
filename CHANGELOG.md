@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.1](https://github.com/dessant/ext-contribute/compare/v0.3.0...v0.3.1) (2019-11-10)
+
+
+### Bug Fixes
+
+* open progress bar ([c4b614b](https://github.com/dessant/ext-contribute/commit/c4b614bcd865da8c3cd7ee45ca69e81c721aec25))
+
 ## [0.3.0](https://github.com/dessant/ext-contribute/compare/v0.2.3...v0.3.0) (2019-11-07)
 
 
