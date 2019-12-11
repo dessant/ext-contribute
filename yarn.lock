@@ -1030,9 +1030,9 @@ execa@^0.7.0:
     signal-exit "^3.0.0"
     strip-eof "^1.0.0"
 
-ext-components@dessant/ext-components#^0.3.1:
-  version "0.3.1"
-  resolved "https://codeload.github.com/dessant/ext-components/tar.gz/3b3970d9aa11524a4eacc7e2ab761f29220ade4a"
+ext-components@dessant/ext-components#^0.4.0:
+  version "0.4.0"
+  resolved "https://codeload.github.com/dessant/ext-components/tar.gz/0ce5da440650152e7f867cae56da41745deec1b6"
   dependencies:
     "@material/button" "^4.0.0"
     "@material/checkbox" "^4.0.0"
