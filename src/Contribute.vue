@@ -4,9 +4,7 @@
       {{ notice }}
     </div>
 
-    <div class="title">
-      Help us make some avocado toast!
-    </div>
+    <div class="title">Help us make some avocado toast!</div>
 
     <div class="desc">
       <div class="desc-text">
@@ -26,9 +24,7 @@
 
     <transition name="goals">
       <div class="goals-wrap" v-if="goals">
-        <div class="cta">
-          Support our current goals
-        </div>
+        <div class="cta">Support our current goals</div>
         <div class="goals">
           <div class="goal" v-for="goal in goals.items" :key="goal.id">
             <div class="goal-bullet">•</div>
@@ -36,6 +32,7 @@
           </div>
         </div>
         <v-linear-progress
+          class="progress"
           :progress="goals.progress.value / goals.progress.goal"
           open
         >
@@ -106,14 +103,14 @@ export default {
     }
   },
 
-  data: function() {
+  data: function () {
     return {
       goals: null
     };
   },
 
   methods: {
-    contribute: async function(service) {
+    contribute: async function (service) {
       const [activeTab] = await browser.tabs.query({
         lastFocusedWindow: true,
         active: true
@@ -125,7 +122,7 @@ export default {
     }
   },
 
-  mounted: async function() {
+  mounted: async function () {
     const rsp = await fetch(
       `https://api.armin.dev/v1/contribute/goals/${this.extSlug}`
     );
@@ -227,6 +224,15 @@ $mdc-theme-primary: #1abc9c;
   margin-right: 8px;
 }
 
+.progress {
+  border-radius: 3px;
+  height: 5px;
+
+  & .mdc-linear-progress__bar-inner {
+    border-top: 5px solid $mdc-theme-primary;
+  }
+}
+
 .progress-details {
   display: flex;
   justify-content: space-between;
@@ -291,6 +297,7 @@ $mdc-theme-primary: #1abc9c;
   align-items: center;
   justify-content: center;
   @include mdc-button-container-fill-color(#ffad01);
+  @include mdc-button-shape-radius(24px);
   width: 192px !important;
   height: 48px !important;
 }
@@ -368,10 +375,6 @@ $mdc-theme-primary: #1abc9c;
 
   .goals {
     margin-top: 48px;
-  }
-
-  .goal-bullet {
-    font-size: 48px;
   }
 
   .progress-details {
