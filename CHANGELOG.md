@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.5](https://github.com/dessant/ext-contribute/compare/v0.3.4...v0.3.5) (2021-10-26)
+
+
+### Features
+
+* update theme ([9965e89](https://github.com/dessant/ext-contribute/commit/9965e89d9efacafb5e940c651f54af5efef95621))
+
 ### [0.3.4](https://github.com/dessant/ext-contribute/compare/v0.3.3...v0.3.4) (2021-08-03)
 
 ### [0.3.3](https://github.com/dessant/ext-contribute/compare/v0.3.2...v0.3.3) (2019-12-11)
