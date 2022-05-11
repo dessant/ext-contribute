@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.6](https://github.com/dessant/ext-contribute/compare/v0.3.5...v0.3.6) (2022-05-11)
+
+
+### Features
+
+* emit event on button press ([d219d0f](https://github.com/dessant/ext-contribute/commit/d219d0f803ce89199e3e80e73ee11a2ea4d05b60))
+
 ### [0.3.5](https://github.com/dessant/ext-contribute/compare/v0.3.4...v0.3.5) (2021-10-26)
 
 
