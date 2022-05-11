@@ -2,8 +2,13 @@
   "name": "ext-contribute",
   "version": "0.3.5",
   "author": "Armin Sebastian",
-  "repository": "https://github.com/dessant/ext-contribute",
   "license": "MIT",
+  "homepage": "https://github.com/dessant/ext-contribute",
+  "repository": {
+    "url": "https://github.com/dessant/ext-contribute.git",
+    "type": "git"
+  },
+  "type": "module",
   "main": "src/index.js",
   "scripts": {
     "update": "ncu --upgrade",
@@ -15,15 +20,14 @@
     "@material/typography": "^4.0.0"
   },
   "peerDependencies": {
-    "@fontsource/roboto": "^4.5.0",
-    "ext-components": "github:dessant/ext-components#v0.4.1",
-    "vue": "^2.6.14",
-    "webextension-polyfill": "^0.8.0"
+    "@fontsource/roboto": "^4.5.5",
+    "ext-components": "github:dessant/ext-components#v0.4.2",
+    "vue": "^2.6.14"
   },
   "devDependencies": {
-    "npm-check-updates": "^11.8.3",
-    "prettier": "^2.3.2",
-    "standard-version": "^9.3.1"
+    "npm-check-updates": "^12.5.11",
+    "prettier": "^2.6.2",
+    "standard-version": "^9.3.2"
   },
   "private": true
 }
