@@ -77,7 +77,6 @@
 </template>
 
 <script>
-import browser from 'webextension-polyfill';
 import {Button, LinearProgress} from 'ext-components';
 
 export default {
@@ -110,15 +109,10 @@ export default {
   },
 
   methods: {
-    contribute: async function (service) {
-      const [activeTab] = await browser.tabs.query({
-        lastFocusedWindow: true,
-        active: true
-      });
-      await browser.tabs.create({
-        url: `https://armin.dev/go/${service}?pr=${this.extSlug}&src=app`,
-        index: activeTab.index + 1
-      });
+    contribute: function (service) {
+      const url = `https://armin.dev/go/${service}?pr=${this.extSlug}&src=app`;
+
+      this.$emit('contribute', {url});
     }
   },
 
