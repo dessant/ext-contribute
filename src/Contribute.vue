@@ -102,6 +102,8 @@ export default {
     }
   },
 
+  emits: ['open'],
+
   data: function () {
     return {
       goals: null
@@ -112,7 +114,7 @@ export default {
     contribute: function (service) {
       const url = `https://armin.dev/go/${service}?pr=${this.extSlug}&src=app`;
 
-      this.$emit('contribute', {url});
+      this.$emit('open', {url});
     }
   },
 
@@ -132,8 +134,6 @@ export default {
 </script>
 
 <style lang="scss">
-$mdc-theme-primary: #1abc9c;
-
 @import '@material/button/mixins';
 @import '@material/theme/mixins';
 @import '@material/typography/mixins';
@@ -254,7 +254,7 @@ $mdc-theme-primary: #1abc9c;
   transition: max-height 0.4s ease, margin-top 0.4s ease, opacity 0.3s ease;
 }
 
-.goals-enter,
+.goals-enter-from,
 .goals-leave-to {
   max-height: 0;
   margin-top: 0;
