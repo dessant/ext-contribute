@@ -19,7 +19,7 @@
           things afloat.
         </p>
       </div>
-      <img class="desc-image" src="./assets/avocado-toast.jpg" />
+      <img class="desc-image" :src="`./assets/avocado-toast.jpg`" />
     </div>
 
     <transition name="goals">
@@ -41,15 +41,15 @@
           <div>
             Raised
             <span class="progress-value">{{ goals.progress.value }}</span>
-            <img class="progress-token" src="./assets/avocado.svg" />
+            <img class="progress-token" :src="`./assets/avocado.svg`" />
             of
             <span class="progress-value">{{ goals.progress.goal }}</span>
-            <img class="progress-token" src="./assets/avocado.svg" />
+            <img class="progress-token" :src="`./assets/avocado.svg`" />
             goal
           </div>
           <div>
             <span class="progress-value">1</span>
-            <img class="progress-token" src="./assets/avocado.svg" />
+            <img class="progress-token" :src="`./assets/avocado.svg`" />
             =
             {{ goals.progress.currency.symbol
             }}<span class="progress-value"
@@ -62,15 +62,15 @@
 
     <div class="cta-buttons">
       <v-button class="contribute-button" @click="contribute('patreon')" raised>
-        <img class="patreon-image" src="./assets/patreon.png" />
+        <img class="patreon-image" :src="`./assets/patreon.png`" />
       </v-button>
       <v-button class="contribute-button" @click="contribute('paypal')" raised>
-        <img class="paypal-image" src="./assets/paypal.png" />
+        <img class="paypal-image" :src="`./assets/paypal.png`" />
       </v-button>
     </div>
 
     <div class="cta-coin" @click="contribute('bitcoin')">
-      <img src="./assets/bitcoin.svg" />
+      <img :src="`./assets/bitcoin.svg`" />
       <div>BITCOIN</div>
     </div>
   </div>
@@ -102,6 +102,8 @@ export default {
     }
   },
 
+  emits: ['open'],
+
   data: function () {
     return {
       goals: null
@@ -112,7 +114,7 @@ export default {
     contribute: function (service) {
       const url = `https://armin.dev/go/${service}?pr=${this.extSlug}&src=app`;
 
-      this.$emit('contribute', {url});
+      this.$emit('open', {url});
     }
   },
 
@@ -254,7 +256,7 @@ $mdc-theme-primary: #1abc9c;
   transition: max-height 0.4s ease, margin-top 0.4s ease, opacity 0.3s ease;
 }
 
-.goals-enter,
+.goals-enter-from,
 .goals-leave-to {
   max-height: 0;
   margin-top: 0;
